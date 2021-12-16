@@ -40,6 +40,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Running on dev
+        run: echo Running on QA
 
 
