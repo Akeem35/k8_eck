@@ -3,7 +3,7 @@ name: Deploy DEV
 on: 
   workflow_run:
     workflows: ["Codecov"]
-    branches: [dev]
+    branches: [development]
     types:
       - completed
     
