@@ -25,6 +25,6 @@ jobs:
       - name: CODECOV - Upload coverage results
         uses: codecov/codecov-action@v1
         with:
-          fail_ci_if_error: true
+          fail_ci_if_error: false
 
 
