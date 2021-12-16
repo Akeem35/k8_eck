@@ -1,0 +1,20 @@
+name: Deploy DEV
+
+on: 
+  workflow_run:
+    workflows: ["Codecov"]
+    branches: [dev]
+    types:
+      - completed
+    
+jobs:
+  deploy_dev2:
+    name: Deploy to dev
+    runs-on: ubuntu-18.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+    
+      - name: Run a one-line script
+        run: echo Running on dev
