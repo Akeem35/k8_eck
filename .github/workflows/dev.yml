@@ -11,7 +11,7 @@ jobs:
   deploy_dev2:
     name: Deploy to dev
     runs-on: ubuntu-18.04
-    timeout-minutes: 10
+    timeout-minutes: 1
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
