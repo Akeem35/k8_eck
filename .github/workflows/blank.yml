@@ -1,34 +1,34 @@
-name: Codecov
+# name: Codecov
 
-on:
-  push:
-    branches: [ main, qa, development ]
+# on:
+#   push:
+#     branches: [ main, qa, development ]
 
-  workflow_dispatch:
+#   workflow_dispatch:
 
-jobs:
-  testing_codecov:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+# jobs:
+#   testing_codecov:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: 12.x
 
-      - name: Install dependencies
-        run: npm install
+#       - name: Install dependencies
+#         run: npm install
       
-      - name: Run the tests
-        run: npm test -- --coverage
+#       - name: Run the tests
+#         run: npm test -- --coverage
       
-      - name: CODECOV - Upload coverage results
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          fail_ci_if_error: true
-          verbose: true
+#       - name: CODECOV - Upload coverage results
+#         uses: codecov/codecov-action@v1
+#         with:
+#           token: ${{ secrets.CODECOV_TOKEN }}
+#           fail_ci_if_error: true
+#           verbose: true
 
 
